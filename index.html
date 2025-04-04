@@ -1,45 +1,138 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AL_BRKS - مبرمج ومصمم محترف</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر AL_BRKS</title>
   <style>
-    body { margin: 0; font-family: sans-serif; background: #111; color: #fff; text-align: center; }
-    header { padding: 3rem 1rem; background: #222; }
-    section { padding: 2rem 1rem; }
-    .btn { padding: 0.75rem 1.5rem; background: #0af; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
-    .card { background: #333; padding: 1rem; border-radius: 10px; margin: 1rem; display: inline-block; width: 250px; }
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #111, #222);
+      color: #fff;
+    }
+    header {
+      background: #000;
+      color: gold;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeIn 1s ease forwards;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+    .product img:hover {
+      transform: scale(1.05);
+    }
+    .product h3 {
+      margin: 0.5rem 0;
+      color: gold;
+    }
+    .product p {
+      color: #ccc;
+      min-height: 60px;
+    }
+    .product strong {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .order-btn {
+      background: gold;
+      color: #000;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .order-btn:hover {
+      background: #e0b800;
+    }
+    footer {
+      background: #000;
+      color: #888;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>مرحباً بك في <span style="color:#0af">AL_BRKS</span></h1>
-    <p>مبرمج ومصمم محترف - أقدّم حلول رقمية عصرية بجودة عالية</p>
-    <button class="btn">تواصل معي</button>
-  </header>
-  <section>
-    <h2>من أنا / About</h2>
-    <p>أنا مطوّر ومصمم واجهات رقمية أساعدك على تحويل أفكارك إلى واقع رقمي مميز.</p>
-  </section>
-  <section>
-    <h2>خدماتي / My Services</h2>
-    <div class="card">
-      <h3>برمجة مواقع</h3>
-      <p>مواقع عصرية، متجاوبة وسريعة الأداء مخصصة حسب احتياجك.</p>
+  <header>متجر AL_BRKS</header>
+
+  <div class="container">
+    <div class="product">
+      <img src="https://via.placeholder.com/300x400" alt="فستان صيفي فاخر">
+      <h3>فستان صيفي فاخر</h3>
+      <p>خامة ممتازة، مريح وأنيق، يناسب السهرات والمشاوير اليومية.</p>
+      <strong>السعر: 110,000 ليرة سورية</strong>
+      <button class="order-btn" onclick="orderNow('فستان صيفي فاخر')">اطلب الآن</button>
     </div>
-    <div class="card">
-      <h3>تصميم شعارات</h3>
-      <p>شعارات احترافية تعبر عن هوية مشروعك وتخلي بصمتك واضحة.</p>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/300x400" alt="ساعة يد أصلية">
+      <h3>ساعة يد أصلية</h3>
+      <p>ساعة فخمة بتصميم كلاسيكي مقاومة للماء بضمان سنة.</p>
+      <strong>السعر: 230,000 ليرة سورية</strong>
+      <button class="order-btn" onclick="orderNow('ساعة يد أصلية')">اطلب الآن</button>
     </div>
-    <div class="card">
-      <h3>بناء متاجر</h3>
-      <p>متاجر إلكترونية متكاملة تساعدك في بيع منتجاتك بسهولة وأمان.</p>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/300x400" alt="نظارات شمسية ماركة">
+      <h3>نظارات شمسية ماركة</h3>
+      <p>حماية من الأشعة فوق البنفسجية، تصميم عصري وجودة ممتازة.</p>
+      <strong>السعر: 85,000 ليرة سورية</strong>
+      <button class="order-btn" onclick="orderNow('نظارات شمسية ماركة')">اطلب الآن</button>
     </div>
-  </section>
-  <section>
-    <h2>تواصل معي / Contact</h2>
-    <p>راسلني على: <a href="mailto:albrks@email.com" style="color:#0af">albrks@email.com</a></p>
-  </section>
+  </div>
+
+  <footer>
+    جميع الحقوق محفوظة &copy; AL_BRKS 2025 | تابعنا على الإنستغرام @al_brks
+  </footer>
+
+  <script>
+    function orderNow(productName) {
+      const phone = '963986375205';
+      const message = `مرحباً، أود الطلب من متجر AL_BRKS:%0Aالمنتج: ${productName}%0Aالاسم: ....%0Aالعنوان: ....%0Aرقم الجوال: ....`;
+      const url = `https://wa.me/${phone}?text=${message}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
