@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم رمز الكود</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #3a7bd5, #3a6073);
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-style: solid;
+        }
+        .triangle-1 {
+            border-width: 50px 50px 0 50px;
+            border-color: #de8383 transparent transparent transparent;
+            top: 50px;
+            left: 25px;
+        }
+        .triangle-2 {
+            border-width: 50px 50px 0 50px;
+            border-color: #9f50a3 transparent transparent transparent;
+            top: 50px;
+            left: 125px;
+        }
+        .triangle-3 {
+            border-width: 0 50px 50px 50px;
+            border-color: transparent transparent #ffcd81 transparent;
+            top: 100px;
+            left: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <div class="triangle triangle-1"></div>
+        <div class="triangle triangle-2"></div>
+        <div class="triangle triangle-3"></div>
+    </div>
+</body>
+</html>
